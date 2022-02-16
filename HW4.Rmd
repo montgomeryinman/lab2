@@ -1,0 +1,37 @@
+---
+title: "Homework4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r }
+choco <- read.csv("https://ds202-at-isu.github.io/labs/data/choco.csv")
+dim(choco)
+
+library(tidyverse)
+
+
+ggplot(choco, aes(x = Review.Date, y = count)) + geom_bar()
+```
+
+Question Set 1:
+1) There are 1852 chocolate bars rated.
+2) 
+
+
+
+```{r}
+ggplot(choco, aes(x = Rating)) + geom_histogram()
+
+ggplot(choco, aes(x = Cocoa.Pct, y = Rating)) + geom_jitter()
+```
+
+Question Set 2:
+
+1) The histogram is unimodal and fairly symmetric, with most of the ratings falling between the 2.5 and 4 range. There are a couple of outliers; a couple on the low side of the rating and one being a 5 rating. 
+
+2) Looking at the scatterplot, there does not appear to be a correlation between Cocoa Percentage and the rating given. 
